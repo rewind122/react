@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#root {
+  height: inherit;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+
+  h1 {
+    margin: 0 0 12px;
+    color: #f0f0f0;
+    font-size: 24px;
+  }
+
+  .weekly-weather-list {
+    padding: 0;
+    display: flex;
+    gap: 36px;
+
+    .daily-weather {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+
+      h2 {
+        margin: 0;
+        color: #f0f0f0;
+        font-size: 16px;
+      }
+    }
+
+  }
+}

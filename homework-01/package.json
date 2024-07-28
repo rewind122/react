@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "react-homework-01",
+  "description": "리액트 1주차 과제 - 아토믹 컴포넌트",
+  "version": "0.0.1",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
