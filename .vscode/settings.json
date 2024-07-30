@@ -1,6 +1,6 @@
 {
   // 에디터 설정
-  "editor.wordWrap": "off",
+  "editor.wordWrap": "on",
   "editor.inlayHints.enabled": "offUnlessPressed",
 
   // 검색 제외
