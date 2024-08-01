@@ -1,12 +1,12 @@
 {
   "private": true,
   "type": "module",
-  "name": "08-html-vs-jsx-markup",
-  "description": "리액트 라이브러리를 사용해 사용자 인터페이스를 구축하는 방법을 학습합니다.",
+  "name": "vite-react",
+  "description": "Vite + React 스캐폴딩 by yamoo9",
   "version": "0.1.0",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint": "eslint \"./src/**\" --report-unused-disable-directives --ignore-pattern .gitignore",
     "preview": "vite preview"
   },
@@ -25,8 +25,6 @@
     "eslint-plugin-react-hooks": "4.6.2",
     "eslint-plugin-react-refresh": "0.4.9",
     "globals": "15.8.0",
-    "prop-types": "^15.8.1",
-    "typescript": "^5.5.4",
     "vite": "5.3.5"
   }
 }
