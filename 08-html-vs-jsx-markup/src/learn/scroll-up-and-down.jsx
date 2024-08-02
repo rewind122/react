@@ -1,19 +1,27 @@
+// 스크롤 다운/업 버튼에 이벤트를 연결해 App 컴포넌트가 부드럽게 스크롤 되도록 핸들러를 작성합니다.
+// 참고: https://developer.mozilla.org/ko/docs/Web/API/Element/scrollIntoView
+
 function ScrollUpAndDown() {
-  // 스크롤 다운/업 버튼에 이벤트를 연결해 App 컴포넌트가 부드럽게 스크롤 되도록 핸들러를 작성합니다.
-  // 참고: https://developer.mozilla.org/ko/docs/Web/API/Element/scrollIntoView
+  const handleScrollDown = () => {
+    // console.log('scroll down');
+    const targetElement = document.querySelector('.buttonGroup');
+    targetElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  };
+
+  const handleScrollUp = () => {
+    // console.log('scroll up');
+    const targetElement = document.querySelector('.NavContents');
+    targetElement.scrollIntoView({ block: 'end', behavior: 'smooth' });
+  };
 
   return (
     <div role="group" className="buttonGroup">
       <button
         type="button"
         className="scrollDown"
-        onClick={
-          /* event handler */ () => {
-            console.log('clicked scroll down button');
-          }
-        }
         aria-label="스크롤 다운"
         title="스크롤 다운"
+        onClick={handleScrollDown}
       >
         <svg
           fill="currentColor"
@@ -37,6 +45,7 @@ function ScrollUpAndDown() {
         className="scrollUp"
         aria-label="스크롤 업"
         title="스크롤 업"
+        onClick={handleScrollUp}
       >
         <svg
           fill="currentColor"

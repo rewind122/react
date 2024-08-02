@@ -1,20 +1,20 @@
 // --------------------------------------------------------------------------
-// ✅ 컴포넌트의 순수성(Purity)
+// ✅ 테스트 시나리오
 // --------------------------------------------------------------------------
-// - [ ] 컴포넌트 = 순수 함수
-// - [ ] 컴포넌트 지역 내, 수정 (Local Mutation)
-// - [ ] 컴포넌트의 순수성 부수기 (부수 효과 코드 포함)
+// - 컴포넌트 렌더링 관점에서 어떤 테스트를 수행할 지 고민해 작성하세요.
 // --------------------------------------------------------------------------
 
-import { UserType } from '@/@types/globals.d';
+import { number, string } from 'prop-types';
+import { StatusMessagesType } from '@/@types/entries.d';
 
 Avatar.propTypes = {
-  user: UserType.isRequired,
+  name: string.isRequired,
+  photo: string.isRequired,
+  status: StatusMessagesType,
+  size: number,
 };
 
-function Avatar({ user }) {
-  const { name, photo, status, size } = user;
-
+function Avatar({ name, photo, status = 'offline', size = 64 }) {
   let iconPath = '';
   let statusMessage = '';
 
