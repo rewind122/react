@@ -1,0 +1,36 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --similar-black: #101010;
+
+  --gray: #9DA1B4;
+  --indigo: #373F67;
+
+  --rounded-xs: 4px;
+  --rounded-sm: 6px;
+  --rounded-md: 8px;
+  --rounded-lg: 12px;
+  --rounded-xl: 16px;
+  --rounded-2xl: 20px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 6px;
+  --spacing-md: 8px;
+  --spacing-lg: 12px;
+  --spacing-xl: 16px;
+  --spacing-2xl: 20px;
+
+  --pretendard: "Pretendard", sans-serif;
+
+  --font-sm: 10px;
+  --font-weight-base: 400;
+  --line-height-base: 1.6;
+}
+
+body {
+  margin: 0;
+  background-color: var(--similar-black);
+  color: var(--white);
+  box-sizing: border-box;
+  font-family: var(--pretendard);
+}

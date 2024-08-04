@@ -1,0 +1,66 @@
+#react-app {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#react-app h1{
+  padding-bottom: var(--spacing-2xl);
+}
+
+.button-list {
+  --items-gap: var(--spacing-2xl);
+
+  display: flex;
+  gap: var(--items-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button-list button {
+  --content-gap: var(--spacing-sm);
+  --button-padding-x: var(--spacing-lg);
+  --button-padding-y: var(--spacing-sm);
+  --button-bg-color-default: var(--white);
+  --button-line-color-default: var(--gray);
+  --button-rounded: var(--rounded-2xl);
+  --text-color-default: var(--black);
+  --text-size: var(--font-sm);
+  --line-height: var(--line-height-base);
+
+  display: flex;
+  align-items: center;
+  gap: var(--content-gap);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  background-color: var(--button-bg-color-default);
+  border-radius: var(--button-rounded);
+  border: 1px solid var(--button-line-color-default);
+  color: var(--text-color-default);
+  font-size: var(--text-size);
+  line-height: var(--line-height);
+}
+
+.button-list button .down-focused {
+  display: none;
+}
+
+.button-list button:focus {
+  --button-bg-color-focus: var(--indigo);
+  --button-line-color-focus: var(--indigo);
+  --text-color-focus: var(--white);
+
+  background-color: var(--button-bg-color-focus);
+  border-color: var(--button-line-color-focus);
+  color: var(--text-color-focus);
+}
+
+.button-list button:focus .down-default {
+  display: none;
+}
+
+.button-list button:focus .down-focused {
+  display: block;
+}
