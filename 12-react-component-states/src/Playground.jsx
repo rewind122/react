@@ -1,15 +1,17 @@
-// import TermAndConditions from '@/components/TermAndCondition';
-// import ExpandableText from "@/components/ExpandableText";
-// import ExpandableText from "@/components/ExpandableText.class";
-// import AvatarListPage from '@/pages/AvatarListPage';
-import Counter from '@/components/Counter';
+import UsersPage from '@/pages/users/UsersPage';
 
 function Playground() {
   return (
-    <>
-      <Counter />
-    </>
+    <div style={styles}>
+      <UsersPage />
+    </div>
   );
 }
+
+const styles = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 20,
+};
 
 export default Playground;
