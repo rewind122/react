@@ -13,8 +13,9 @@ const routes = [
   {
     title: '리액트로 만드는 싱글 페이지 애플리케이션',
     path: '/',
-    element: <Home />
+    element: <Home />,
   },
+  // Route Object { title, path, element }
   {
     title: '리-렌더 없이 기억',
     path: '/remember-without-re-render',
