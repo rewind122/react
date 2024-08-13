@@ -11,7 +11,7 @@ import Home from './home';
 // 어떤 경로에 어떤 컴포넌트를 렌더링 할 것인가 설정
 const routes = [
   {
-    title: '리액트로 만드는 싱글 페이지 애플리케이션',
+    title: '싱글 페이지 애플리케이션',
     path: '/',
     element: <Home />,
   },
