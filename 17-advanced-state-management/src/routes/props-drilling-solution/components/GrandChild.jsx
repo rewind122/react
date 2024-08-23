@@ -1,17 +1,19 @@
-import { object } from 'prop-types';
+import { useTheme } from '@/contexts/theme';
+import { usePage } from '../context';
 import S from './style.module.css';
 
-GrandChild.propTypes = {
-  data: object,
-};
+function GrandChild() {
+  // 컨텍스트 값 가져오기
+  const { message } = usePage();
 
-function GrandChild({ data }) {
-  console.log(data);
+  const { forground, background, accent } = useTheme(({ theme }) => theme);
 
   return (
-    <div className={S.box}>
-      <strong className={S.label}>Grand Child</strong>
-      {data.message && <p>{data.message}</p>}
+    <div className={S.box} style={{ backgroundColor: background }}>
+      <strong className={S.label} style={{ color: accent }}>
+        Grand Child
+      </strong>
+      <p style={{ color: forground }}>{message}</p>
     </div>
   );
 }

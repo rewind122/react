@@ -1,12 +1,13 @@
-import useClock from '@/hooks/useClock';
+import { useCallback } from 'react';
 import S from './style.module.css';
-import Counter from '../Counter';
+import useClock from '@/hooks/useClock';
 import TimeToggler from './TimeToggler';
+import Counter from '../Counter';
 
 function TimeAndCounter() {
   const { time, turnOn, onOff } = useClock();
 
-  const handleToggleTime = () => onOff((c) => !c);
+  const handleToggleTime = useCallback(() => onOff((c) => !c), [onOff]);
 
   const label = `타임 ${turnOn ? '스톱' : '플레이'}`;
 

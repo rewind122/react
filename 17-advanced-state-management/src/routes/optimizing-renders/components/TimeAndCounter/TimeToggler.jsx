@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { func, node } from 'prop-types';
 import S from './style.module.css';
 
@@ -14,4 +15,4 @@ function TimeToggler({ children, onToggle }) {
   );
 }
 
-export default TimeToggler;
+export default memo(TimeToggler);
